@@ -1,2 +1,23 @@
 # Rubrik-MV_begin_end_proxy
 Simple HTTP Proxy for triggering Rubrik Managed Volume begin|end snapshots from a HOST supporting TLSv1.2 Use Case:  To be used on non TLSv1.2 clients to start / end snapshots through more up to date hosts 
+
+# Getting Started
+
+Requirements: 
+    flask is required to run HTTP Server. Install with pip install flask.
+
+Usage: 
+
+    Proxy:
+        python proxy.py
+        defaults to 0.0.0.0:12345 for server
+            or 
+        python proxy.py <host_address> <port>
+    
+    Trigger Snapshot:
+        python snapshot.py <"begin|end"> <proxy:port> <"cdm_ip"> <mv_id>
+
+       Example:
+            -- for MangedVolume:::5ecc5f58-085c-4835-9a00-3a9abd08b330 --
+            python snapshot.py "begin" "localhost:12345" "10.35.36.165" "5ecc5f58-085c-4835-9a00-3a9abd08b330"
+        Note: snapshot.py is not required to trigger backup, script will generate and print curl command used to trigger each request which can be used anywhere in local environment which has network connectivity to proxy.
