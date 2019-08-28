@@ -59,5 +59,9 @@ Usage:
             "message": "{\"snapshotId\":\"e69f2df5-9f02-438d-a098-ccfbbecd223e\"}"
             }
             * Closing connection 0
-       
+        Subsequent backups can use the same snapshot script to trigger an "end" or use the generated CURL command:
+            Begin:
+                curl -v -X GET -d '{"cluster": "10.35.36.165", "manageVolumeId": "5ecc5f58-085c-4835-9a00-3a9abd08b330"}' http://localhost:12345/begin_snapshot
+            End:
+                curl -v -X GET -d '{"cluster": "10.35.36.165", "manageVolumeId": "5ecc5f58-085c-4835-9a00-3a9abd08b330"}' http://localhost:12345/end_snapshot
         
