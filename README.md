@@ -3,6 +3,11 @@ Simple HTTP Proxy for triggering Rubrik Managed Volume begin|end snapshots from 
 
 # Getting Started
 
+Steps Before Use:
+1. Create an credentials file, containing 'username:pw'. Method: echo -n 'admin:abcd1234' > ~/special_cdm_auth
+
+2. Update auth.cfg within Rubrik-modify_share package/folder with credential file location. Method echo -n '~/special_cdm_auth' > auth.cfg
+
 Requirements: 
     flask is required to run HTTP Server. Install with pip install flask.
 
