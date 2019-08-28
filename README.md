@@ -11,6 +11,12 @@ Steps Before Use:
 Requirements: 
     flask is required to run HTTP Server. Install with pip install flask.
 
+
+Steps Before Use:
+1. Create an credentials file, containing 'username:pw'. Method: echo -n 'admin:abcd1234' > ~/special_cdm_auth
+
+2. Update auth.cfg within Rubrik-MV_begin_end_proxy package/folder with credential file location. Method echo -n '~/special_cdm_auth' > auth.cfg
+
 Usage: 
 
     Proxy:
