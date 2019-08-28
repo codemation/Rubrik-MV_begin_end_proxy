@@ -18,11 +18,11 @@ if __name__ == '__main__':
 #
 #   Usage:  
 #    
-#   python3 snapshot.py <"begin|end"> <proxy:port> <"cdm_ip"> <mv_id>
+#   python snapshot.py <"begin|end"> <proxy:port> <"cdm_ip"> <mv_id>
 #
 #   Example:
 #       ## for MangedVolume:::5ecc5f58-085c-4835-9a00-3a9abd08b330 ##
-#       python3 snapshot.py "begin" "localhost:12345" "10.35.36.165" "5ecc5f58-085c-4835-9a00-3a9abd08b330"
+#       python snapshot.py "begin" "localhost:12345" "10.35.36.165" "5ecc5f58-085c-4835-9a00-3a9abd08b330"
 # """
             )
     else:
